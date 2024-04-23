@@ -3,8 +3,7 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_url: https://github.com/sabahatatta/Datasets/raw/main/Chicken-fecal-images.zip
-  local_data_file: artifacts/data_ingestion/data.zip
+  local_data_file: artifacts/data_ingestion/archive.zip
   unzip_dir: artifacts/data_ingestion
 
 prepare_base_model:
