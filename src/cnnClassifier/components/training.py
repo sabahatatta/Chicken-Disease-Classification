@@ -16,11 +16,14 @@ class Training:
         self.model = tf.keras.models.load_model(
             self.config.updated_base_model_path 
         )
+
+        optimizer = tf.keras.optimizers.Adam()
         self.model.compile(
-        optimizer='adam',  # Use the appropriate optimizer
+        optimizer= optimizer,  
         loss='binary_crossentropy',  # Adjust the loss function based on your specific task
         metrics=['accuracy']  # Include any metrics you are interested in
         )
+        
     
     def train_valid_generator(self):
 
@@ -68,7 +71,8 @@ class Training:
 
     @staticmethod
     def save_model(path: Path, model: tf.keras.Model):
-        model.save(path)
+        model_save_path = str(path.with_suffix('.keras'))  # Ensure the path ends with '.keras'
+        model.save(model_save_path)
 
 
     def train(self, callback_list: list):
