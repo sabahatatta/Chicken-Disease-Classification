@@ -6,3 +6,8 @@ data_ingestion:
   source_url: https://github.com/sabahatatta/Datasets/raw/main/Chicken-fecal-images.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+prepare_base_model:
+  root_dir: artifacts/prepare_base_model
+  base_model_path: artifacts/prepare_base_model/base_model.h5 #downloading VGG16 and saving it as it is
+  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5 #adding custom layer to base_model VGG16
