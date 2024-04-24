@@ -2,7 +2,7 @@ AUGMENTATION: True
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
 BATCH_SIZE: 16 #training on local machine
 INCLUDE_TOP: False #training custom layer only
-EPOCHS: 1 
-CLASSES: 2 #representing classification classes Cocidices/Healthy Classes
+EPOCHS: 6 
+CLASSES: 9 #representing classification classes Cocidices/Healthy Classes
 WEIGHTS: imagenet #image classification models already trained on Imagenet dataset
 LEARNING_RATE: 0.01
